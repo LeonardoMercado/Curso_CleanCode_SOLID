@@ -1,4 +1,5 @@
 import './style.css'
+import './clean-code/04-tarea-refactorizar-funciones';
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
