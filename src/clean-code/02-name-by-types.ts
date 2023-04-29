@@ -1,19 +1,23 @@
 (() => {
 
     // arreglo de temperaturas celsius
-    const temperaturesInCelcius = [33.6, 12.34];
+    const temperaturesInCelsius = [33.6, 12.34];
 
     // Dirección ip del servidor
     const serverIp = '123.123.123.123';
 
     // Listado de usuarios
-    const usersData = [{id: 1, email: 'fernando@google.com'},{ id: 2, email: 'juan@google.com' }, { id: 3, email: 'melissa@google.com' }];
+    const users = [
+        {id: 1, email: 'fernando@google.com'},
+        {id: 2, email: 'juan@google.com'},
+        {id: 3, email: 'melissa@google.com'},
+    ];
 
     // Listado de emails de los usuarios
-    const usersEmails = usersData.map( user => user.email );
+    const usersEmails = users.map(user => user.email);
 
     // Variables booleanas de un video juego
-    const canJump = false;
+    const isJump = false;
     const canRun = true;
     const hasItems = false;
     const isLoading = false;
@@ -35,12 +39,12 @@
     }
 
     // obtiene libros desde un URL
-    function getBooksByUrl( url: string) {
+    function getBooksByUrl(url: string) {
         throw new Error('Function not implemented.');
     }
 
     // obtiene el área de un cuadrado basado en sus lados
-    function getSqureArea( side: number ) {
+    function getSquareAreaBySide(side: number) {
         throw new Error('Function not implemented.');
     }
 
@@ -48,9 +52,5 @@
     function printJob() {
         throw new Error('Function not implemented.');
     }
-
-
-
-
 
 })();
