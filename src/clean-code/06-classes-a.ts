@@ -1,5 +1,7 @@
 (()=>{
 
+    // NO Aplicando el Principio de responsabilidad unica:
+
     type Gender = 'M'|'F';
 
     // Forma larga:
@@ -25,8 +27,52 @@
         ){}
     }
 
-    const newPerson = new Person('Leonardo','M',new Date());
-    const otherPerson = new Person('Fabio','F',new Date());
-    console.log({ newPerson, otherPerson });
+    class User extends Person{
+        public lastAccess: Date;
+        constructor(
+            private email: String,
+            private role: String,
+            name: String,
+            gender: Gender,
+            birthDate: Date,
+        ) {
+            super(name,gender,birthDate);
+            this.lastAccess = new Date();
+        }
+
+        checkCredentials(){
+            // Revisar las credenciales del usuario
+            let userAuthenticate = false;
+            return userAuthenticate;
+        }
+    }
+
+    class UserSettings extends User{
+        constructor(
+            public workingDirectory: String,
+            public lastOpenFolder: String,
+            email: String,
+            rol: String,
+            name: String,
+            gender: Gender,
+            birthDay: Date,
+        ) {
+            super(email,rol,name,gender,birthDay);
+        }
+    }
+
+    const userSettings = new UserSettings(
+        '/home/usr',
+        '/Downloads',
+        'lfmercado@unal.edu.co',
+        'ADMINISTRADOR',
+        'Leonardo',
+        'M',
+        new Date('1992-03-08')
+    )
+
+    console.log({userSettings, areCredentialValid: userSettings.checkCredentials()});
+
+
 
 })();

@@ -5,7 +5,8 @@ import './clean-code/06-classes-a'
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
-  <h1>CleanCode y SOLID</h1>
+  <h1>Curso CleanCode y SOLID</h1>
+  <h3>Por: Ingeniero Leonardo Fabio Mercado Benítez</h3>
   <span>Revisar la consola de JavaScript</span>
 `
 
