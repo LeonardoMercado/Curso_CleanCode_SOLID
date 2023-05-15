@@ -16,11 +16,11 @@
         constructor(
             public value: string,
             public placeholder: string,
-        ) {
-        }
+        ) { }
     }
 
     class InputEvents  {
+        constructor() {}
         setFocus() {};
         getValue() {};
         isActive() {};
@@ -29,12 +29,12 @@
 
     class inputElement{
         private htmlElment: HtmlElement;
-        private inputAttributes: InputAttributes;
-        private inputEvents: InputEvents;
+        private attributes: InputAttributes;
+        private events: InputEvents;
         constructor(value,placeholder,id) {
-            this.inputAttributes = new InputAttributes(value,placeholder);
             this.htmlElment = new HtmlElement(id,'input');
-            this.inputEvents = new InputEvents();
+            this.attributes = new InputAttributes(value,placeholder);
+            this.events = new InputEvents();
         }
     }
 
